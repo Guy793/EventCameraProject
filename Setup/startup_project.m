@@ -17,6 +17,10 @@ projectRoot = project.RootFolder;
 %% Open Root Model:
 % open('modelname');
 
+%% Add to Python Path
+pyLibraryFolder = fullfile(projectRoot,'Functions','Python');
+insert(py.sys.path, int64(0), pyLibraryFolder)
+
 %% Setting explicit folder for project generated code instead of being generated to "current folder" (which is default):
 
 myCacheFolder = fullfile(projectRoot, 'Cash');
